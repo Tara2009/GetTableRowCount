@@ -16,6 +16,12 @@ Get RecordCount from the Table
     Appstate             Home
     ClickText            Do not consent
     Sleep                4s
+    ${CellValue}=        GetText                     //table[@id\='contactList']//td[text()\='Maria Anders']
+    Log                  ${CellValue}
+    ${TableRecCount}=    GetTableRow                 //table[@id\='contactList']//tr
+    #${rows}=            GetTableRow                 //last                      skip_header=True
+    Log                  Table Row Count is : ${TableRecCount}
+    
     #${TableRecCount}=                               GetTableRow                 //table[@id\='contactList']//tr
     #Get Matching Xpath Count                        //table[@id\='contactList']//tbody//tr
     #${count}=           get element count           //table[@id\='contactList']//tbody//tr
@@ -24,9 +30,4 @@ Get RecordCount from the Table
     #//table[@id\='contactList']//tr
     #get element count                               //table[@id\='contactList']//tbody//tr
     #UseTable            //table[@id\='contactList']//td[text()\='Maria Anders']
-    #UseTable             xpath\=//table[@id\='contactList']                      Maria Anders
-    ${CellValue}=        GetText        //table[@id\='contactList']//td[text()\='Maria Anders']
-    Log                  ${CellValue}
-    ${TableRecCount}=                               GetTableRow                 //table[@id\='contactList']//tr
-    #${rows}=             GetTableRow                 //last                      skip_header=True
-    Log                  Table Row Count is : ${TableRecCount}
+    #UseTable            xpath\=//table[@id\='contactList']                      Maria Anders
