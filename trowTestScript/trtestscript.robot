@@ -9,14 +9,6 @@ Library                  QForce
 Suite Setup              Setup Browser
 Suite Teardown           End suite
 
-*** Variables ***
-${for30Day}=             16
-${for31Day}=             20
-${setMonth}=             January
-${DropMonth}=            Apr
-${DropYear}=             2015
-
-
 *** Test Cases ***
 Get RecordCount from the Table
     [Tags]               GRecCount
