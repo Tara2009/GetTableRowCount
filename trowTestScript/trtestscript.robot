@@ -14,6 +14,7 @@ Get RecordCount from the Table
     [Tags]               GRecCount
     [Documentation]      Get the Record count from the table
     Appstate             Home
+    ClickText            Do not consent
     Sleep                4s
     #${TableRecCount}=                               GetTableRow                 //table[@id\='contactList']//tr
     #Get Matching Xpath Count                        //table[@id\='contactList']//tbody//tr
