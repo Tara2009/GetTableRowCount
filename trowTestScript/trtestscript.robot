@@ -18,7 +18,8 @@ Get RecordCount from the Table
     Sleep                4s
     ${CellValue}=        GetText                     //table[@id\='contactList']//td[text()\='Maria Anders']
     Log                  ${CellValue}
-    ${TableRecCount}=    GetTableRow                 //table[@id\='contactList']
+    UseTable             xpath\=//table[@id\='contactList']
+    ${TableRecCount}=    GetTableRow                 //Last                       skip_header=True                 
     #${rows}=            GetTableRow                 //last                      skip_header=True
     Log                  Table Row Count is : ${TableRecCount}
     
