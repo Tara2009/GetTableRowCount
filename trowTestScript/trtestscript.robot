@@ -20,7 +20,6 @@ Get RecordCount from the Table
     Log                  ${CellValue}
     UseTable             xpath\=//table[@id\='contactList']
     ${TableRecCount}=    GetTableRow                 //last                       skip_header=True                 
-    #${rows}=            GetTableRow                 //last                      skip_header=True
     Log                  Table Row Count is : ${TableRecCount}
     
     #${TableRecCount}=                               GetTableRow                 //table[@id\='contactList']//tr
