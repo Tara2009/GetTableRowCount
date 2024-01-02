@@ -13,6 +13,7 @@ Suite Teardown           End suite
 Get RecordCount from the Table
     [Tags]               GRecCount
     [Documentation]      Get the Record count from the table
+    Sleep                4s
     #${TableRecCount}=                               GetTableRow                 //table[@id\='contactList']//tr
     #Get Matching Xpath Count                        //table[@id\='contactList']//tbody//tr
     #${count}=           get element count           //table[@id\='contactList']//tbody//tr
